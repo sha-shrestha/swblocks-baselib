@@ -172,7 +172,7 @@ endif # ifeq ($(BL_PLAT_IS_DARWIN),1)
 
 export CXX # needed by utf_loader
 
-CXXFLAGS += -std=c++11 -fPIC -Wall -Wpedantic -Wextra
+CXXFLAGS += -std=c++11 -fPIC -Wall -Wpedantic -Wextra -Wno-c++1z-extensions
 CXXFLAGS += -fno-strict-aliasing -fmessage-length=0
 
 ifeq ($(BL_PLAT_IS_DARWIN),1)

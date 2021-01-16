@@ -19,6 +19,7 @@
 
 #include <apps/bl-tool/commands/CryptoRsaKeyExport.h>
 #include <apps/bl-tool/commands/CryptoRsaKeyGenerate.h>
+#include <apps/bl-tool/commands/CryptoJWT.h>
 
 #include <baselib/cmdline/CommandBase.h>
 
@@ -44,6 +45,7 @@ namespace bltool
 
             CryptoRsaKeyExport               m_cryptoRsaKeyExport;
             CryptoRsaKeyGenerate             m_cryptoRsaKeyGenerate;
+            CryptoJWT                        m_cryptoJWT;
 
         public:
 
@@ -54,7 +56,8 @@ namespace bltool
                 :
                 bl::cmdline::CommandBase( parent, "crypto" ),
                 m_cryptoRsaKeyExport( this, globalOptions ),
-                m_cryptoRsaKeyGenerate( this, globalOptions )
+                m_cryptoRsaKeyGenerate( this, globalOptions ),
+                m_cryptoJWT( this, globalOptions )
             {
                 setHelpMessage(
                     "Usage: @CAPTION@\n"

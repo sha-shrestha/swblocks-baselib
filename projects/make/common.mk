@@ -127,6 +127,7 @@ LIBPATH  := $(subst $(if $(findstring ;,$(LIBPATH)),;,:), ,$(LIBPATH))
 INCLUDE  := $(subst $(if $(findstring ;,$(INCLUDE)),;,:), ,$(INCLUDE))
 INCLUDE  += $(SRCDIR)/versioning
 INCLUDE  += $(SRCDIR)/include
+INCLUDE  += $(SRCDIR)/vendor
 INCLUDE  += $(SRCDIR)/utests/include
 
 CPPFLAGS += -DBL_BUILD_PLATFORM=$(BL_PROP_PLAT)
